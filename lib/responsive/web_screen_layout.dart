@@ -62,36 +62,33 @@ class WebScreenLayout extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(left: 5, right: 5),
-        child: Column(
-          children: [
-            SizedBox(
-              height: size.height * 0.25,
+      body: Column(
+        children: [
+          SizedBox(
+            height: size.height * 0.25,
+          ),
+          const Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: [
+                    Search(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SearchButtons(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TranslationButtons(),
+                  ],
+                ),
+                WebFooter()
+              ],
             ),
-            const Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      Search(),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      SearchButtons(),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TranslationButtons(),
-                    ],
-                  ),
-                  WebFooter()
-                ],
-              ),
-            )
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
