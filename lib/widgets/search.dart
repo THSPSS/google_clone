@@ -23,7 +23,7 @@ class Search extends StatelessWidget {
           width: size.width * 0.4,
           child: TextFormField(
             decoration: InputDecoration(
-              border: OutlineInputBorder(
+              border: const OutlineInputBorder(
                 borderSide: BorderSide(
                   color: searchBorder,
                 ),
@@ -35,7 +35,8 @@ class Search extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: SvgPicture.asset(
                   'assets/images/search-icon.svg',
-                  colorFilter: ColorFilter.mode(searchBorder, BlendMode.srcIn),
+                  colorFilter:
+                      const ColorFilter.mode(searchBorder, BlendMode.srcIn),
                   width: 1,
                   height: 1,
                 ),
