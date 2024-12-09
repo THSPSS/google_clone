@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_clone/colors.dart';
-import 'package:google_clone/widgets/footer_text.dart';
 
-class WebFooter extends StatelessWidget {
-  const WebFooter({super.key});
+import '../../colors.dart';
+import '../footer_text.dart';
+
+class MobileFooter extends StatelessWidget {
+  const MobileFooter({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +40,10 @@ class WebFooter extends StatelessWidget {
           ),
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 10.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Wrap(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     FooterText(
                       title: 'Advertising',
@@ -62,6 +63,7 @@ class WebFooter extends StatelessWidget {
                   ],
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     FooterText(
                       title: 'Privacy',
