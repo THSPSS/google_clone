@@ -4,9 +4,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../colors.dart';
 import '../widgets/mobile/mobile_footer.dart';
 import '../widgets/search.dart';
-import '../widgets/translation_button.dart';
-import '../widgets/web/search_buttons.dart';
-import '../widgets/web/web_footer.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({super.key});
@@ -100,11 +97,6 @@ class MobileScreenLayout extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    SearchButtons(),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    TranslationButtons(),
                   ],
                 ),
                 MobileFooter()

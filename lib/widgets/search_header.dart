@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_clone/colors.dart';
 
+import '../screens/search_screen.dart';
+
 class SearchHeader extends StatelessWidget {
   const SearchHeader({super.key});
 
@@ -36,6 +38,16 @@ class SearchHeader extends StatelessWidget {
                   border: Border.all(color: searchColor),
                 ),
                 child: TextFormField(
+                  onFieldSubmitted: (query) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => SearchScreen(
+                          searchQuery: query,
+                          start: '0',
+                        ),
+                      ),
+                    );
+                  },
                   textAlignVertical: TextAlignVertical.center,
                   style: const TextStyle(fontSize: 16),
                   decoration: InputDecoration(
